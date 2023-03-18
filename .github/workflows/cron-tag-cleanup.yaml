@@ -1,0 +1,28 @@
+name: Cron Image Stream Tag Cleanup
+on:
+  schedule:
+    - cron: '30 20 * * 3'
+  workflow_dispatch:
+
+jobs:
+  paymentswebsite-commits:
+    if: github.repository_owner == 'bcgov'
+    name: The Payments Website Commits
+    uses: ./.github/workflows/reusable-tag-cleanup-commit.yaml
+    secrets:
+      namespace: ${{ secrets.LICENCE_PLATE_PAYMENTS }}-tools
+      openshift-api: ${{ secrets.OPENSHIFT_API }}
+      openshift-token: ${{ secrets.SA_PASSWORD_PAYMENTS_TOOLS }}
+    with:
+      number-to-keep: 3
+
+  # paymentswebsite-pull-requests:
+  #   if: github.repository_owner == 'bcgov'
+  #   name: The Q Pull Requests
+  #   uses: ./.github/workflows/reusable-tag-cleanup-pr.yaml
+  #   secrets:
+  #     namespace: ${{ secrets.LICENCE_PLATE_PAYMENTS }}-tools
+  #     openshift-api: ${{ secrets.OPENSHIFT_API }}
+  #     openshift-token: ${{ secrets.SA_PASSWORD_PAYMENTS_TOOLS }}
+  #   with:
+  #     days-to-keep: 7
