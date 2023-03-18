@@ -1,4 +1,4 @@
-name: Wait for Rollouts
+name: _Wait for Rollouts
 on:
   workflow_call:
     inputs:

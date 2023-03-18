@@ -1,4 +1,4 @@
-name: Tag Cleanup for Commits
+name: _Tag Cleanup for Commits
 on:
   workflow_call:
     inputs:

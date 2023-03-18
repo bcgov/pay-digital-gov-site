@@ -1,4 +1,4 @@
-name: Dockerfile Build
+name: _Dockerfile Build
 on:
   workflow_call:
     inputs:

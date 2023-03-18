@@ -1,4 +1,4 @@
-name: Tag Image
+name: _Tag Image
 on:
   workflow_call:
     inputs:
