@@ -1,0 +1,124 @@
+.home-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.circle-image {
+  border-radius: 50%;
+  margin-right: 0.75rem;
+}
+
+.menu {
+  padding: 0.25rem 0rem !important;
+  position: relative;
+  color: #222;
+}
+
+.menu:hover {
+  color: #222;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+
+.active>.menu {
+  background-image: linear-gradient(#222, #222);
+  background-repeat: repeat-x;
+  background-size: 1px 1px;
+  background-position: 0 calc(100% - 0.1em);
+}
+
+.nav-link {
+  cursor: pointer;
+}
+
+.external-link {
+  color: #036;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.idir:before {
+  content: '';
+  background: url('../images/lock.svg');
+  position:relative;
+  margin-right: 0.25rem;
+  margin-left: 0.125rem;
+  width: 15px;
+  height: 15px;
+  margin-bottom: -2px;
+  display: inline-block;
+}
+
+.MuiTabs-flexContainer {
+  justify-content: space-between;
+}
+
+.p-style:before {
+  content: "";
+  display: block;
+  width: 92px;
+  border-bottom: 2px solid #036;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.arrow-up {
+  position: relative;
+  padding-top: 2px;
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: #fff;
+  /* top: 5px; */
+  /* transform: scale(0.35); */
+}
+
+.widget-input {
+  border: none;
+  width: 100%;
+  font-size: 0.9rem;
+  padding: 0.25rem;
+}
+
+.widget-input:focus-visible {
+  outline: none;
+}
+
+.new-tab:after {
+  content: '';
+  background: url('../images/box-arrow-up-right.svg');
+  background-repeat: no-repeat;
+  position: relative;
+  margin-right: 0.125rem;
+  margin-left: 0.5rem;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin-bottom: -1px;
+}
+
+.download:before {
+  content: '';
+  background: url('../images/arrowdown.svg');
+  position:relative;
+  margin-right: 0.25rem;
+  margin-left: 0.125rem;
+  width: 15px;
+  height: 15px;
+  margin-bottom: -1px;
+  display: inline-block;
+}
+
+.bullet-list {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  margin-left: 1.25rem;
+}
+
+.bullet-list > li {
+  margin-bottom: 0.25rem;
+}
+
+.bullet-list > li::marker {
+  color: #666;
+}
